@@ -1,0 +1,9 @@
+.miobj{
+    background: #ddd;
+    padding: 1em;
+    border-radius: 1em;
+}
+.miobj h5{
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}

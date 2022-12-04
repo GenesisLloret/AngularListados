@@ -1,0 +1,11 @@
+<div class="jumbotron container fluid my-3 info">
+    <h1 class="text-center mb-3 display-4">Aplicación de LISTADOS por Génesis Lloret Ramos</h1>
+    <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+    <h4>Tu listado:</h4>
+    <div *ngIf="this.todos.length===0; else elseBlock">No tienes ningún elemento en tu lista...</div>
+    <ng-template #elseBlock>
+        <div *ngFor="let todo of todos">
+            <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
+        </div>
+    </ng-template>
+</div>
